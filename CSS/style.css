@@ -216,53 +216,24 @@ body {
     font-weight: 700;
     line-height: 60px;
 }
-.section-description {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
-    max-width: 700px;
-    margin: 15px auto 50px auto;
+.section-description{
+    -tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+        color: #595959;
+    
+    background-clip: text;
+    display: inline-block;
+}
+.grid{
+    display: flex;
+   
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.grid-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 40px;
-    transition: all 0.4s ease;
-    text-align: left;
-    backdrop-filter: blur(10px);
-}
-
-.grid-item:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: #ec135d;
-    transform: translateY(-10px);
-}
-
-.grid-item .icon {
-    font-size: 32px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.grid-item h3 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.grid-item p {
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.6;
+.contant-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 
