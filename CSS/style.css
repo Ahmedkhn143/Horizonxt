@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+.nav-bar{
+  border:20px solid black;
+  border-radius: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.hero-section {
+    background-image: url(https://horizonxt.tech/_next/image?url=%2Fimages%2Fhero%2Fhero-bg.jpg&w=1920&q=75);
+    background-size: cover;
+    
+
+}
+.hero-section .hero-content .crystal-ball img{
+    position: relative;
+    height: 300px;
+    left: 70%;
+}
+.hero-section .hero-content strong{
+      text-transform: uppercase;
+    color: #ec135d;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.hero-section .hero-content h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: white;
+}
+.hero-section .hero-content p{
+        letter-spacing: .2px;
+    font-family: inherit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: white;
+
+     /* --tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #b9b8b8;
+    --tw-gradient-to: #595959;
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+    color: #0000;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block; */
+}
+.hero-section .hero-content .btn{
+    display: inline-flex;
+     
+}
+.hero-content .info .hero-btns{
+
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+
+
+}
+.hero-btns .btn-primary{
+    background-color: #ec135d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.hero-btns .btn-secondary{
+    border: 2px solid var(--border-white);
+    color: var(--text-primary);
+    cursor: pointer;
+    background: 0 0;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    transition: all 1.022s cubic-bezier(.25, .46, .45, .94);
+    display: flex;
+    color: white;
+}
+
+
+
+
