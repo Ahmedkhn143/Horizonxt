@@ -1,96 +1,212 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    
-
-}
-.nav-bar{
-  border:20px solid black;
-  border-radius: 40px;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: #0b0209;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nav Bar Styles */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1300px;
+    padding: 15px 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 5px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 35px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.menu-icon span:nth-child(2) {
+    width: 15px;
+}
+
+/* Hero Section */
 .hero-section {
-    background-image: url(https://horizonxt.tech/_next/image?url=%2Fimages%2Fhero%2Fhero-bg.jpg&w=1920&q=75);
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://horizonxt.tech/_next/image?url=%2Fimages%2Fhero%2Fhero-bg.jpg&w=1920&q=75');
     background-size: cover;
-    
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
 
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
 }
-.hero-section .hero-content .crystal-ball img{
-    position: relative;
-    height: 300px;
-    left: 70%;
+
+.info {
+    flex: 1;
+    max-width: 650px;
 }
-.hero-section .hero-content strong{
-      text-transform: uppercase;
+
+.tagline {
     color: #ec135d;
-    font-size: 16px;
     font-weight: 700;
-    line-height: 22px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
 }
-.hero-section .hero-content h1{
-    font-size: 48px;
+
+.info h1 {
+    font-size: 72px;
+    line-height: 1.05;
     font-weight: 700;
-    line-height: 60px;
+    margin-bottom: 30px;
     color: white;
 }
-.hero-section .hero-content p{
-        letter-spacing: .2px;
-    font-family: inherit;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    color: white;
 
-     /* --tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: #b9b8b8;
-    --tw-gradient-to: #595959;
-    --tw-gradient-stops: var(--tw-gradient-via-stops);
-    color: #0000;
-    -webkit-background-clip: text;
-    background-clip: text;
-    display: inline-block; */
+.info h1 .dot {
+    color: #ec135d;
 }
-.hero-section .hero-content .btn{
-    display: inline-flex;
-     
-}
-.hero-content .info .hero-btns{
 
-    margin-top: 20px;
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 45px;
+    max-width: 580px;
+}
+
+.hero-btns {
     display: flex;
     gap: 20px;
-    padding-left: 20px;
-
-
 }
-.hero-btns .btn-primary{
-    background-color: #ec135d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+
+.btn {
+    text-decoration: none;
+    padding: 18px 36px;
+    border-radius: 12px;
+    font-weight: 600;
     font-size: 16px;
-    cursor: pointer;
-}
-.hero-btns .btn-secondary{
-    border: 2px solid var(--border-white);
-    color: var(--text-primary);
-    cursor: pointer;
-    background: 0 0;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    transition: all 1.022s cubic-bezier(.25, .46, .45, .94);
-    display: flex;
-    color: white;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
+.btn-primary {
+    background: transparent;
+    color: white;
+    border: 2px solid #ec135d;
+    box-shadow: 0 0 20px rgba(236, 19, 93, 0.2);
+}
+
+.btn-primary:hover {
+    background: #ec135d;
+    box-shadow: 0 0 30px rgba(236, 19, 93, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 50px rgba(236, 19, 93, 0.4));
+    animation: bounce 4s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+/* Mobile Fixes */
+@media (max-width: 992px) {
+    .nav-bar {
+        padding: 10px 25px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .info {
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .info h1 {
+        font-size: 44px;
+    }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+}
 
 
 
