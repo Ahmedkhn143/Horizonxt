@@ -39,10 +39,12 @@ body {
     right: 0;
     z-index: 1000;
 }
+/* Nav bar img logo size  */
 
 .logo img {
     height: 32px;
 }
+
 
 .menu-icon {
     display: flex;
@@ -67,7 +69,7 @@ body {
 
 /* Hero Section Refined */
 .hero-section {
-  
+
     min-height: 100vh;
     background-image: url('https://horizonxt.tech/_next/image?url=%2Fimages%2Fhero%2Fhero-bg.jpg&w=1920&q=75');
     background-size: cover;
@@ -76,7 +78,8 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 100px; /* Space for fixed nav */
+    padding-top: 100px;
+    /* Space for fixed nav */
 }
 
 .hero-section::after {
@@ -88,18 +91,18 @@ body {
 }
 
 .hero-content {
-      display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     position: relative;
     z-index: 2;
     padding-bottom: 50px;
-  
+
 }
 
 .info {
-  margin-top: 8%;
+    margin-top: 8%;
     flex: 1;
     padding-right: 20px;
 }
@@ -183,7 +186,8 @@ body {
     animation: float 4s ease-in-out infinite;
     width: 420px;
     height: 700px;
-    margin-bottom: -70px; /* Pull it down onto the platform */
+    margin-bottom: -70px;
+    /* Pull it down onto the platform */
 }
 
 .crystal-ball img {
@@ -192,38 +196,48 @@ body {
     display: block;
     filter: drop-shadow(0 0 50px rgba(236, 19, 93, 0.5));
 }
-.divider{
+
+.divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
     margin: 60px auto;
     width: 80%;
 }
-.txt-center{
+
+.txt-center {
     text-align: center;
 }
-.section-label{
-   text-transform: uppercase;
+/* Section Spacing & Card Styles  */
+.section{
+    padding: 0 100px;
+}
+
+.section-label {
+    text-transform: uppercase;
     color: #ec135d;
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
 }
-.section-title{
-  color: #fff;
+
+.section-title {
+    color: #fff;
     font-family: var(--font-serif);
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 60px;
 }
-.section-description{
+
+.section-description {
     -tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
-        color: #595959;
-    
+    color: #595959;
+
     background-clip: text;
     display: inline-block;
 }
+/* flex box for cards */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -231,17 +245,22 @@ body {
     gap: 30px;
     padding: 20px;
     max-width: 1250px;
-    
+
     margin: 0 auto;
+
 }
+/* flex box for card  */
 
 .card {
-    flex: 1 1 250px; /* Grow, Shrink, Basis (Min width before wrapping) */
-    max-width: 400px;
-    min-height: 420px;
+    flex: 0 0 30%;
+    /* Har card 30% width lega */
+    max-width: 30%;
+
+
+    min-height: 80px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,7 +278,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 220px;
+    height: 120px;
     object-fit: cover;
     margin-bottom: 25px;
     border-radius: 12px;
@@ -278,143 +297,48 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
-/* .card1:hover, .card2:hover, .card3:hover{
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(236, 19, 93, 0.2);
-}    */
-
-/* .contant-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+.explore-btn {
+    text-align: center;
+    margin-top: 40px;
 }
- */
+.text-center{
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Float Animation */
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-25px) rotate(1deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
+}
+.text-center .section-label{
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.text-center .section-title{
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+.text-center .section-description{
+    -tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    color: #595959;
+    background-clip: text;
+    display: inline-block;
 }
 
-/* Glow Effect behind the ball */
-.visual-container::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(236, 19, 93, 0.25) 0%, transparent 70%);
-    z-index: 1;
-    filter: blur(40px);
-}
+.touch-section{
+    background:#ec135d;
+    border: 1px solid rgba(179, 24, 24, 0.08);
+    border-radius: 24px;
+    padding: 45px 111px;
+    max-width: 900px;   
+    margin: 60px auto;
+    text-align: center;
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .info h1 {
-        font-size: 60px;
-    }
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 60px;
-    }
-    .info {
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero-image {
-        justify-content: center;
-        padding-right: 0;
-    }
 }
+.touch-content{
+    margin-bottom: 30px;
 
-@media (max-width: 768px) {
-    .info h1 {
-        font-size: 45px;
-    }
-    .nav-bar {
-        padding: 10px 20px;
-    }
-    .container {
-        padding: 0 20px;
-    }
-    .crystal-ball {
-        width: 280px;
-    }
-    .platform {
-        width: 350px;
-        margin-top: -80px;
-    }
-}
-
-.base {
-    width: 550px;
-    height: auto;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
-}
-
-@media (max-width: 992px) {
-    .container { padding: 0 20px; }
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-    }
-    .info { padding: 0; margin-bottom: 60px; }
-    .info h1 { font-size: 52px; }
-    .description { margin: 0 auto 40px auto; }
-    .hero-btns { justify-content: center; }
-    .ball { width: 240px; }
-    .base { width: 420px; }
-    .platform { margin-top: -45px; }
 }
