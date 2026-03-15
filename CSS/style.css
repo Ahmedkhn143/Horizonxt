@@ -1,5 +1,10 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
+:root {
+    --font-serif: 'Playfair Display', serif;
+    --accent-primary: #ec135d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -230,11 +235,9 @@ body {
 }
 
 .section-description {
-    -tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    color: #595959;
-
-    background-clip: text;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 1.6;
     display: inline-block;
 }
 /* flex box for cards */
@@ -321,10 +324,9 @@ body {
     line-height: 60px;
 }
 .text-center .section-description{
-    -tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    color: #595959;
-    background-clip: text;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 1.6;
     display: inline-block;
 }
 
