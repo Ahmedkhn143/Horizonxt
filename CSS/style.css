@@ -44,6 +44,7 @@ body {
     right: 0;
     z-index: 1000;
 }
+
 /* Nav bar img logo size  */
 
 .logo img {
@@ -212,8 +213,9 @@ body {
 .txt-center {
     text-align: center;
 }
+
 /* Section Spacing & Card Styles  */
-.section{
+.section {
     padding: 0 100px;
 }
 
@@ -240,6 +242,7 @@ body {
     line-height: 1.6;
     display: inline-block;
 }
+
 /* flex box for cards */
 .flex-container {
     display: flex;
@@ -252,6 +255,7 @@ body {
     margin: 0 auto;
 
 }
+
 /* flex box for card  */
 
 .card {
@@ -304,18 +308,21 @@ body {
     text-align: center;
     margin-top: 40px;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 
 }
-.text-center .section-label{
+
+.text-center .section-label {
     text-transform: uppercase;
     color: var(--accent-primary);
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
 }
-.text-center .section-title{
+
+.text-center .section-title {
     color: #fff;
     font-family: var(--font-serif);
     font-size: 48px;
@@ -323,72 +330,181 @@ body {
     font-weight: 700;
     line-height: 60px;
 }
-.text-center .section-description{
+
+.text-center .section-description {
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
     line-height: 1.6;
     display: inline-block;
 }
 
-.touch-section{
-    background:#ec135d;
+.touch-section {
+    background: #ec135d;
     border: 1px solid rgba(179, 24, 24, 0.08);
     border-radius: 24px;
     padding: 45px 111px;
-    max-width: 900px;   
+    max-width: 900px;
     margin: 60px auto;
     text-align: center;
 
 }
-.touch-content{
+
+.touch-content {
     margin-bottom: 30px;
 
 }
-.footer-container{
+
+.footer-container {
     justify-content: center;
     margin: 30px 200px 30px 200px;
 
 }
-.footer-container .content-container h2{
+
+.footer-container .content-container h2 {
     font-size: 28px;
 }
 
-.content-container .contant-btn{
+.content-container .contant-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: space-around;
     color: #fff;
 }
 
-.flex h4{
-            font-size: 24px;
-        
+.flex h4 {
+    font-size: 24px;
+
 }
-a{
+
+a {
     color: #fff;
     text-decoration: none;
-        
+
 }
-a:hover{
+
+a:hover {
     color: var(--accent-primary);
 }
-li{
+
+li {
     list-style: none;
 }
-.flex h4{
+
+.flex h4 {
     padding: 0 0 20px 0;
 }
 
-.f-info{
-   padding: 30px 0px 20px 200px;
-   align-items: center;
+.f-info {
+    padding: 30px 0px 20px 200px;
+    align-items: center;
 
 }
-.f-info span{
-    color:#ec135d;
+
+.f-info span {
+    color: #ec135d;
+}
+
+/* industries Section */
+#industries {
+    padding: 150px 0;
+}
+
+.content-container {
+    max-width: 952px;
+    margin: 0 auto;
+}
+
+.justify-between {
+    display: flex;
+    padding: 30px 0;
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.justify-between .btn {
+    color: #6b6b6b;
+    border: 1px solid #2f3237;
+    border-radius:12px;
+    background-color: #19131c;
+    
+}
+.justify-between .btn:hover {
+    color: #ec135d;
+    border-color: #ec135d;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(236, 19, 93, 0.5);
+}
+
+/* How we do it section  */
+.how-we-do-it {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.how-we-do-it > div {
+    flex: 1;
+    text-align: left;
+}
+
+.how-we-do-it .discover > div,
+.how-we-do-it .design > div,
+.how-we-do-it .build > div,
+.how-we-do-it .scale > div {
+    display: flex;
+    flex-direction: column; /* Number aur Title ek dusre ke upar honge image ki tarah */
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.how-we-do-it span {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.how-we-do-it .section-title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.how-we-do-it p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* White horizontal line under text */
+.how-we-do-it .discover::after,
+.how-we-do-it .design::after,
+.how-we-do-it .build::after,
+.how-we-do-it .scale::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.dot:hover{
+    color: #ec135d;
 }
