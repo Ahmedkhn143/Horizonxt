@@ -512,7 +512,7 @@ li {
 /* Why Horizonxt section */
 #what-drives-us {
     position: relative;
-    padding: 90px 24px 40px;
+    padding: 84px 20px 30px;
     overflow: hidden;
 }
 
@@ -528,23 +528,23 @@ li {
 }
 
 .why-shell {
-    max-width: 1360px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
 .why-frame {
-    background: linear-gradient(130deg, rgba(27, 6, 24, 0.88), rgba(8, 8, 16, 0.92));
-    border: 1px solid rgba(236, 19, 93, 0.72);
-    border-radius: 26px;
-    padding: 60px 42px 48px;
+    background-image: url('../Assets/frame.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: min(100%, 1260px);
+    margin: 0 auto;
+    aspect-ratio: 1057 / 424;
+    padding: clamp(46px, 5.2vw, 66px) clamp(22px, 3.4vw, 44px) clamp(26px, 3.6vw, 42px);
     text-align: center;
     position: relative;
-    clip-path: polygon(0 16%, 18% 16%, 28% 0, 78% 0, 88% 16%, 100% 16%, 100% 100%, 0 100%);
-    box-shadow:
-        inset 0 0 0 1px rgba(236, 19, 93, 0.14),
-        0 30px 60px rgba(0, 0, 0, 0.32);
 }
 
 .why-kicker {
@@ -557,34 +557,35 @@ li {
 
 .why-title {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2.25rem, 4vw, 4.3rem);
     line-height: 1.1;
-    margin: 20px 0 56px;
+    margin: 18px 0 44px;
     color: #ffffff;
 }
 
 .why-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 28px;
+    gap: 20px;
 }
 
 .why-item {
     text-align: center;
 }
 
+
 .why-icon-wrap {
-    width: 82px;
-    height: 82px;
-    margin: 0 auto 26px;
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 24px;
     border: 2px solid #d10f58;
-    border-radius: 20px;
+    border-radius: 21px;
     transform: rotate(45deg);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 0 14px rgba(236, 19, 93, 0.15);
+    background: rgba(4, 4, 8, 0.5);
+    box-shadow: inset 0 0 14px rgba(236, 19, 93, 0.12), 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .why-icon-wrap img {
@@ -597,7 +598,7 @@ li {
 
 .why-item h3 {
     font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 2vw, 2.7rem);
+    font-size: clamp(1.8rem, 2.25vw, 3rem);
     line-height: 1.1;
     margin-bottom: 14px;
     color: #fff;
@@ -605,10 +606,30 @@ li {
 
 .why-item p {
     color: rgba(255, 255, 255, 0.55);
-    font-size: 22px;
-    line-height: 1.45;
+    font-size: clamp(14px, 1.45vw, 20px);
+    line-height: 1.35;
     margin: 0 auto;
     max-width: 290px;
+}
+
+@media (max-width: 1120px) {
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 20px;
+    }
+}
+
+@media (max-width: 680px) {
+    .why-frame {
+        background-size: cover;
+        width: 100%;
+        padding: 56px 20px 44px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
 }
 
 /* Our Team Stats Section */
@@ -643,7 +664,7 @@ li {
 .team-stat-chip {
     background: #18121a;
     border-radius: 16px;
-    padding: 22px 32px;
+    padding: 10px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -655,9 +676,7 @@ li {
     color: #fff;
     transition: box-shadow 0.2s;
 }
-.team-stat-chip:hover {
-    box-shadow: 0 0 0 2px #ec135d, 0 4px 32px 0 rgba(236, 19, 93, 0.18);
-}
+
 .stat-label {
     font-family: var(--font-serif);
     font-size: 1.25rem;
@@ -675,92 +694,3 @@ li {
     font-weight: 700;
 }
 
-@media (max-width: 900px) {
-    .team-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-    .team-stats-section {
-        padding-top: 32px;
-    }
-    .team-stats-title {
-        font-size: 2rem;
-    }
-    .team-stat-chip {
-        font-size: 1.1rem;
-        padding: 16px 18px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .why-item h3 {
-        font-size: 2.1rem;
-    }
-
-    .why-item p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .why-frame {
-        clip-path: none;
-        border-radius: 24px;
-        padding: 50px 30px 40px;
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 26px 20px;
-    }
-
-    .why-item h3 {
-        font-size: 1.95rem;
-    }
-
-    .why-item p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 640px) {
-    #what-drives-us {
-        padding: 72px 14px 20px;
-    }
-
-    .why-frame {
-        padding: 44px 20px 30px;
-    }
-
-    .why-kicker {
-        font-size: 14px;
-    }
-
-    .why-title {
-        margin: 14px 0 34px;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .why-icon-wrap {
-        width: 74px;
-        height: 74px;
-        margin-bottom: 20px;
-    }
-
-    .why-icon-wrap img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .why-item h3 {
-        font-size: 1.65rem;
-    }
-
-    .why-item p {
-        font-size: 16px;
-        max-width: 320px;
-    }
-}
