@@ -14,10 +14,14 @@
     <div class="logo">
       <img src="https://horizonxt.tech/_next/static/media/logo.3b18220d.svg" alt="horizonXT logo" />
     </div>
-    <div class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-controls="mainMenu" aria-expanded="false">☰</button>
+    <div id="mainMenu" class="menu-icon" hidden>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+
     </div>
   </nav>
   <!-- Hero Section -->
@@ -61,55 +65,49 @@
     </div>
     <div class="flex-container">
       <div class="card">
-        <img src="./Assets/contant/generative.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/generative.webp" alt="AI Solutions" />
         <h3>Generative AI & ML</h3>
         <p>
           AI models that create, predict, and automate — tailored to your business needs.
         </p>
       </div>
       <div class="card">
-        <img src="./Assets/contant/card-web-dev.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/card-web-dev.webp" alt="AI Solutions" />
         <h3>Web & Mobile App Development</h3>
         <p>
           Custom apps built for performance, scale, and seamless experience across all platforms.
         </p>
       </div>
       <div class="card">
-        <img src="./Assets/contant/crm&enterprices.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/crm&enterprices.webp" alt="AI Solutions" />
         <h3>CRM & Enterprise</h3>
         <p>
           Scalable enterprise solutions and CRM systems that streamline operations and growth.
         </p>
       </div>
       <div class="card">
-        <img src="./Assets/contant/card-cloud.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/card-cloud.webp" alt="AI Solutions" />
         <h3>Cloud & DevOps</h3>
         <p>
           Move to the cloud smoothly — with speed, security, and zero disruption.
         </p>
       </div>
       <div class="card">
-        <img src="./Assets/contant/bi-datascience.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/bi-datascience.webp" alt="AI Solutions" />
         <h3>BI & Data Science</h3>
         <p>
           Turn raw data into real-time insights and smarter business decisions.
         </p>
       </div>
       <div class="card">
-        <img src="./Assets/contant/card-consulting.webp"
-          alt="AI Solutions" />
+        <img src="./Assets/contant/card-consulting.webp" alt="AI Solutions" />
         <h3>Software Consulting</h3>
         <p>
           We guide your tech decisions to align with business goals and drive growth.
         </p>
       </div>
     </div>
-    
+
   </div>
 
   <!-- Industries Section -->
@@ -255,16 +253,20 @@
       <h3 class="team-stats-title">Our Team Stats</h3>
       <div class="team-stats-grid">
         <div class="team-stat-chip">
-          <span class="stat-label">&lt;Devs <span class="stat-key">count=</span><span class="stat-value">"45+"</span>/&gt;</span>
+          <span class="stat-label">&lt;Devs <span class="stat-key">count=</span><span
+              class="stat-value">"45+"</span>/&gt;</span>
         </div>
         <div class="team-stat-chip">
-          <span class="stat-label">&lt;Industries <span class="stat-key">count=</span><span class="stat-value">"5+"</span>/&gt;</span>
+          <span class="stat-label">&lt;Industries <span class="stat-key">count=</span><span
+              class="stat-value">"5+"</span>/&gt;</span>
         </div>
         <div class="team-stat-chip">
-          <span class="stat-label">&lt;Projects Delivered <span class="stat-key">count=</span><span class="stat-value">"50+"</span>/&gt;</span>
+          <span class="stat-label">&lt;Projects Delivered <span class="stat-key">count=</span><span
+              class="stat-value">"50+"</span>/&gt;</span>
         </div>
         <div class="team-stat-chip">
-          <span class="stat-label">&lt;Years Experience <span class="stat-key">count=</span><span class="stat-value">"17+"</span>/&gt;</span>
+          <span class="stat-label">&lt;Years Experience <span class="stat-key">count=</span><span
+              class="stat-value">"17+"</span>/&gt;</span>
         </div>
       </div>
     </div>
@@ -353,6 +355,46 @@
       <p>© 2025 horizoNXT. <span>All Rights Reserved.</span></p>
     </div>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
+
+    if (menuToggle && mainMenu) {
+      const setMenuState = (isOpen) => {
+        mainMenu.hidden = !isOpen;
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      };
+
+      menuToggle.addEventListener('click', () => {
+        setMenuState(mainMenu.hidden);
+      });
+
+      mainMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuState(false));
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedInsideNav = event.target.closest('.nav-bar');
+        if (!clickedInsideNav) {
+          setMenuState(false);
+        }
+      });
+    }
+
+    const whyIcons = document.querySelectorAll('.why-icon-wrap');
+    if (whyIcons.length) {
+      whyIcons.forEach((iconWrap) => {
+        iconWrap.addEventListener('click', () => {
+          const isAlreadyActive = iconWrap.classList.contains('is-active');
+          whyIcons.forEach((item) => item.classList.remove('is-active'));
+          if (!isAlreadyActive) {
+            iconWrap.classList.add('is-active');
+          }
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
