@@ -14,15 +14,16 @@
     <div class="logo">
       <img src="https://horizonxt.tech/_next/static/media/logo.3b18220d.svg" alt="horizonXT logo" />
     </div>
-    <button id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-controls="mainMenu" aria-expanded="false">☰</button>
-    <div id="mainMenu" class="menu-icon" hidden>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </nav>
-
-    </div>
+    <details class="menu-dropdown">
+      <summary id="menuToggle" aria-label="Toggle navigation menu">☰</summary>
+      <div class="menu-icon">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="service.html">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </details>
   </nav>
   <!-- Hero Section -->
   <main class="hero-section">
@@ -286,7 +287,7 @@
   </div>
 
   <div class="divider"></div>
-  <!-- Footer section -->
+  <!-- Footer section start -->
 
   <footer class="footer-container">
     <div class="content-container">
@@ -355,46 +356,8 @@
       <p>© 2025 horizoNXT. <span>All Rights Reserved.</span></p>
     </div>
   </footer>
+  <!-- Footer section end -->
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mainMenu = document.getElementById('mainMenu');
-
-    if (menuToggle && mainMenu) {
-      const setMenuState = (isOpen) => {
-        mainMenu.hidden = !isOpen;
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      };
-
-      menuToggle.addEventListener('click', () => {
-        setMenuState(mainMenu.hidden);
-      });
-
-      mainMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => setMenuState(false));
-      });
-
-      document.addEventListener('click', (event) => {
-        const clickedInsideNav = event.target.closest('.nav-bar');
-        if (!clickedInsideNav) {
-          setMenuState(false);
-        }
-      });
-    }
-
-    const whyIcons = document.querySelectorAll('.why-icon-wrap');
-    if (whyIcons.length) {
-      whyIcons.forEach((iconWrap) => {
-        iconWrap.addEventListener('click', () => {
-          const isAlreadyActive = iconWrap.classList.contains('is-active');
-          whyIcons.forEach((item) => item.classList.remove('is-active'));
-          if (!isAlreadyActive) {
-            iconWrap.classList.add('is-active');
-          }
-        });
-      });
-    }
-  </script>
 </body>
 
 </html>
