@@ -177,7 +177,7 @@ body {
 
 
 .main{
-    background-image: url(./Assets/service-bg.webp);
+    background-image: url(../Assets/service-bg.webp);
     background-size: cover;
     background-position: center;
     min-height: 110vh;
