@@ -576,9 +576,7 @@ li {
     position: absolute;
     inset: -100px 0 auto;
     height: 380px;
-    background:
-        radial-gradient(circle at 22% 50%, rgba(236, 19, 93, 0.24), rgba(236, 19, 93, 0) 45%),
-        radial-gradient(circle at 75% 10%, rgba(80, 19, 236, 0.18), rgba(80, 19, 236, 0) 40%);
+
     pointer-events: none;
 }
 
