@@ -179,8 +179,30 @@ main {
 }
 
 
-
-
+/* main section */
+.main{
+    background-image: url(../Assets/ai\ bg.webp) ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main h2 {
+    font-size: 56px;
+    --tw-leading: 72px;
+    line-height: 72px;
+}
+.main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto 30px;
+}
 /* Content section start */
 .txt-center {
     text-align: center;
