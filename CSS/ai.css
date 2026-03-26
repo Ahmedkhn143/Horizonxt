@@ -178,6 +178,9 @@ main {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.content-center{
+  justify-content: space-around;
+}
 
 /* main section */
 .main{
