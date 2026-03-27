@@ -130,10 +130,7 @@ main {
     position: relative;
 }
 
-#menuToggle:hover {
-    background: rgba(236, 19, 93, 0.22);
-    box-shadow: 0 0 18px rgba(236, 19, 93, 0.3);
-}
+
 
 #menuToggle:active {
     transform: scale(0.96);
@@ -182,7 +179,9 @@ main {
   justify-content: space-around;
 }
 
-/* main section */
+/* main contant section */
+
+    
 .main{
     background-image: url(../Assets/ai\ bg.webp) ;
     background-size: cover;
@@ -192,6 +191,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .main h2 {
     font-size: 56px;
@@ -207,6 +207,21 @@ main {
     margin: 20px auto 30px;
 }
 /* Content section start */
+
+.contant-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;
+    width: min(1100px, 92%);
+    margin: 0 auto 40px;
+}
+.heading{
+
+    padding:30px;
+}
 .txt-center {
     text-align: center;
 }
