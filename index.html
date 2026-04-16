@@ -123,15 +123,57 @@
           Deep domain expertise across industries that matter most.
         </p>
       </div>
-      <div class="flex-container industries">
-        <div class="justify-between">
-          <button class="btn">&lt;<!-- -->Retail<!-- -->&gt;</button>
-          <button class="btn">&lt;<!-- -->Healthcare<!-- -->&gt;</button>
-          <button class="btn">&lt;<!-- -->Education<!-- -->&gt;</button>
-          <button class="btn">
-            &lt;<!-- -->Financial Services<!-- -->&gt;
-          </button>
-          <button class="btn">&lt;<!-- -->Manufacturing<!-- -->&gt;</button>
+
+      <!-- Hidden Radio Inputs -->
+      <input type="radio" name="industry_tabs" id="tab-retail" checked hidden>
+      <input type="radio" name="industry_tabs" id="tab-healthcare" hidden>
+      <input type="radio" name="industry_tabs" id="tab-education" hidden>
+      <input type="radio" name="industry_tabs" id="tab-finance" hidden>
+      <input type="radio" name="industry_tabs" id="tab-manufacturing" hidden>
+
+      <div class="industry-tabs">
+        <label for="tab-retail" class="tab-btn">&lt;Retail&gt;</label>
+        <label for="tab-healthcare" class="tab-btn">&lt;Healthcare&gt;</label>
+        <label for="tab-education" class="tab-btn">&lt;Education&gt;</label>
+        <label for="tab-finance" class="tab-btn">&lt;Financial Services&gt;</label>
+        <label for="tab-manufacturing" class="tab-btn">&lt;Manufacturing&gt;</label>
+      </div>
+
+      <div class="industry-content">
+        <!-- Retail -->
+        <div id="retail" class="tab-pane">
+          <p>AI-driven personalization, inventory optimization, and omnichannel experiences that boost conversions.</p>
+          <div class="tags">
+            <span>&lt;E-Commerce&gt;</span> <span>&lt;Consumer_Goods&gt;</span> <span>&lt;Omnichannel&gt;</span>
+          </div>
+        </div>
+        <!-- Healthcare -->
+        <div id="healthcare" class="tab-pane">
+          <p>Digital health platforms, patient engagement tools, and AI-assisted diagnostics improving outcomes.</p>
+          <div class="tags">
+            <span>&lt;Telemedicine&gt;</span> <span>&lt;Health_Data&gt;</span> <span>&lt;AI_Diagnostics&gt;</span>
+          </div>
+        </div>
+        <!-- Education -->
+        <div id="education" class="tab-pane">
+          <p>Personalized learning systems, virtual classrooms, and AI-powered content delivery platforms.</p>
+          <div class="tags">
+            <span>&lt;EdTech&gt;</span> <span>&lt;E-Learning&gt;</span> <span>&lt;LMS&gt;</span>
+          </div>
+        </div>
+        <!-- Financial Services -->
+        <div id="finance" class="tab-pane">
+          <p>Secure fintech platforms, fraud detection systems, and intelligent automation for financial operations.</p>
+          <div class="tags">
+            <span>&lt;FinTech&gt;</span> <span>&lt;Payments&gt;</span> <span>&lt;Risk_Management&gt;</span>
+          </div>
+        </div>
+        <!-- Manufacturing -->
+        <div id="manufacturing" class="tab-pane">
+          <p>IoT-enabled smart factories, supply chain automation, and predictive maintenance systems.</p>
+          <div class="tags">
+            <span>&lt;Industrial_IoT&gt;</span> <span>&lt;Automation&gt;</span> <span>&lt;Predictive_Maintenance&gt;</span>
+          </div>
         </div>
       </div>
     </div>
@@ -358,7 +400,6 @@
     </div>
   </footer>
   <!-- Footer section end -->
-
-</body>
+  </body>
 
 </html>
