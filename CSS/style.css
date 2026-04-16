@@ -130,7 +130,7 @@ body {
 .hero-section {
 
     min-height: 100vh;
-    background-image: url('https://horizonxt.tech/_next/image?url=%2Fimages%2Fhero%2Fhero-bg.jpg&w=1920&q=75');
+    background-image: url('../Assets/hero-bg.webp');
     background-size: cover;
     background-position: center;
     display: flex;
