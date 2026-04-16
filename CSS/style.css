@@ -137,7 +137,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 20px;
     /* Space for fixed nav */
 }
 
@@ -151,13 +151,19 @@ body {
 
 .hero-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     position: relative;
     z-index: 2;
     padding-bottom: 50px;
+}
 
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .info {
@@ -202,6 +208,7 @@ body {
 .hero-btns {
     display: flex;
     gap: 15px;
+    
 }
 
 .btn {
@@ -212,24 +219,25 @@ body {
     font-size: 15px;
     transition: all 0.3s ease;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: transparent;
     color: white;
     border: 2px solid #ec135d;
-
+    box-shadow: 0 0 15px rgba(236, 19, 93, 0.3);
 }
 
 .btn-primary:hover {
-    background: #ec135d;
-    box-shadow: 0 0 20px rgba(236, 19, 93, 0.4);
+    background: rgba(236, 19, 93, 0.1);
+    box-shadow: 0 0 25px rgba(236, 19, 93, 0.6);
 }
 
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
 }
 
 .btn-secondary:hover {
@@ -239,12 +247,18 @@ body {
 
 /* Crystal Ball & Platform Visuals */
 
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
 .crystal-ball {
-    position: relative;
+    position:relative;
     z-index: 5;
     animation: float 4s ease-in-out infinite;
-    width: 420px;
-    height: 700px;
+    width: 500px;
+    height: 600px;
     margin-bottom: -70px;
     /* Pull it down onto the platform */
 }
