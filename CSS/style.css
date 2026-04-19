@@ -341,19 +341,19 @@ body {
     align-items: center;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    border-color: #ec135d;
-    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-10px) scale(1.02);
+    border-color: #dc1c5c;
+    background: rgba(165, 22, 22, 0.078);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
     width: 100%;
-    height: 120px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 25px;
     border-radius: 12px;
@@ -482,6 +482,7 @@ li {
 /* industries Section */
 #industries {
     padding: 150px 0;
+    background: linear-gradient(to right, #544340e8 50%,);
 }
 
 .content-container {
@@ -525,6 +526,11 @@ li {
 .how-we-do-it > div {
     flex: 1;
     text-align: left;
+    transition: all 0.3s ease;
+}
+
+.how-we-do-it > div:hover {
+    transform: translateY(-5px);
 }
 
 .how-we-do-it .discover > div,
@@ -981,7 +987,7 @@ li {
     margin-top: 60px;
     font-size: 15px;
 }
-
+ 
 .footer-copyright span {
     color: #ec135d;
 }
