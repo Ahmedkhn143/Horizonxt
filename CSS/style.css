@@ -414,6 +414,7 @@ body {
     max-width: 900px;
     margin: 60px auto;
     text-align: center;
+    
 
 }
 
@@ -421,34 +422,7 @@ body {
     margin-bottom: 30px;
 
 }
-/* Footer section start */
-
-.footer-container {
-    justify-content: center;
-    margin: 30px 200px 30px 200px;
-
-}
-
-.footer-container .content-container h2 {
-    font-size: 28px;
-}
-
-.content-container .contant-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-around;
-    color: #fff;
-}
-
-.flex h4 {
-    font-size: 24px;
-
-}
+/* Global link reset */
 
 a {
     color: #fff;
@@ -464,25 +438,15 @@ li {
     list-style: none;
 }
 
-.flex h4 {
-    padding: 0 0 20px 0;
-}
-
-.f-info {
-    padding: 30px 0px 20px 200px;
-    align-items: center;
-
-}
-
-.f-info span {
-    color: #ec135d;
-}
-/* Footer section end */
-
-/* industries Section */
+/* Industries section */
 #industries {
     padding: 150px 0;
-    background: linear-gradient(to right, #544340e8 50%,);
+    background-image: radial-gradient(
+    circle at 0% 100%, 
+    #121e54 0%, 
+    #050505 50%
+  );
+  
 }
 
 .content-container {
@@ -515,12 +479,21 @@ li {
 }
 
 /* How we do it section  */
+#how-we-do-it {
+    padding: 120px 0;
+     background-image: radial-gradient(
+    circle at left, 
+    #121e54 0%, 
+    #050505 50%
+  );
+}
 .how-we-do-it {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
     margin-top: 60px;
+    
 }
 
 .how-we-do-it > div {
@@ -567,7 +540,14 @@ li {
     line-height: 1.6;
     margin-bottom: 25px;
 }
-
+#what-drives-us{
+    /* padding: 120px 0; */
+     background-image: radial-gradient(
+    circle at 20% 100%, 
+    #14114ec6 0%, 
+    #170c0c 50%
+  );
+}
 /* White horizontal line under text */
 .how-we-do-it .discover::after,
 .how-we-do-it .design::after,
@@ -734,6 +714,7 @@ li {
     text-align: center;
     position: relative;
     z-index: 2;
+
 }
 
 .team-stats-title {
@@ -963,22 +944,7 @@ li {
     margin-top: 48px; /* matching visual space for empty heading */
 }
 
-.f-socials {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
 
-.f-socials a {
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.f-socials a:hover {
-    color: #ec135d;
-}
 
 
 .footer-copyright {

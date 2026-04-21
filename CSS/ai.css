@@ -114,7 +114,7 @@ main {
     padding-top: 80px;
 }
 
-/* Fallback if image not found */
+
 .ai-hero::before {
     content: '';
     position: absolute;
