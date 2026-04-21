@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
+/* Theme tokens shared across AI-like service pages */
 :root {
     --font-serif: 'Playfair Display', serif;
     --accent-primary: #ec135d;
@@ -20,6 +21,7 @@ body {
     background-image: radial-gradient(circle at 10% 20%, rgba(13, 1, 15, 1) 0%, rgba(10, 2, 10, 1) 90%);
 }
 
+/* Reserve room for fixed navbar */
 main {
     padding-top: 112px;
 }
@@ -143,76 +145,13 @@ main {
     letter-spacing: 2px;
 }
 
-/* New AI Page Content Styles */
-.intro-header {
-    display: none;
-}
-
-.ai-title {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-
-.ai-subtitle {
-    color: var(--accent-primary);
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
+/* Intro/content area below hero */
 .info-section {
     padding: 40px 0;
 }
 
-.section-label-alt {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-.section-title-alt {
-    font-size: 32px;
-    font-family: var(--font-serif);
-    margin-bottom: 25px;
-    color: #fff;
-}
-
-.section-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
-}
-
-.section-content strong {
-    color: #fff;
-}
-
-.deliverables-list {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.deliverables-list li {
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 15px;
-}
-
-.deliverables-list li strong {
-    color: #fff;
-    margin-right: 10px;
-}
-
 @media (max-width: 768px) {
-    .ai-title {
-        font-size: 36px;
-    }
-    
+    /* Keep content comfortably readable on small screens */
     .content-container {
         padding: 0 20px;
     }
@@ -222,29 +161,6 @@ main {
 .section-page {
     margin-top: 40px;
     margin-bottom: 80px;
-}
-
-.intro-header {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.ai-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #fff;
-    font-family: var(--font-serif);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.ai-subtitle {
-    color: var(--accent-primary);
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0;
-    text-transform: none;
 }
 
 .header-divider {
@@ -395,53 +311,8 @@ main {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.content-center{
-  justify-content: space-around;
-}
-
-/* main contant section */
-
-    
-.main{
-    background-image: url(../Assets/ai\ bg.webp) ;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.main h2 {
-    font-size: 56px;
-    --tw-leading: 72px;
-    line-height: 72px;
-}
-.main p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 600px;
-    text-align: center;
-    margin: 20px auto 30px;
-}
+/* Service cards grid shared by AI/CRM/Web/DevOps/DataScience pages */
 /* Content section start */
-
-.contant-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 12px;
-    width: min(1100px, 92%);
-    margin: 0 auto 40px;
-}
-.heading{
-
-    padding:30px;
-}
 .txt-center {
     text-align: center;
 }
@@ -678,6 +549,7 @@ li {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    /* Accessibility: collapse animations for motion-sensitive users */
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;

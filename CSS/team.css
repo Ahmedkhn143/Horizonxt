@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
+/* Shared team page theme tokens */
 :root {
     --font-serif: 'Playfair Display', serif;
     --accent-primary: #ec135d;
@@ -174,26 +175,6 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-
-
-.main{
-    background-image: url(./Assets/service-bg.webp);
-    background-size: cover;
-    background-position: center;
-    min-height: 110vh;
-    padding-top: 130px;
-}
-.text-center {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-   padding: 192px 20px;
-}
-
-
 /* Why Horizonxt section */
 #what-drives-us {
     margin: 30px auto 0 auto;
@@ -232,6 +213,7 @@ body {
     width: min(100%, 1000px);
     margin: 0 auto;
     aspect-ratio: 1057 / 424;
+    /* clamp(): responsive spacing between min and max values */
     padding: clamp(34px, 4vw, 48px) clamp(18px, 2.6vw, 30px) clamp(34px, 4vw, 50px);
     text-align: center;
     position: relative;
@@ -391,6 +373,7 @@ body {
 
 
 
+/* Footer layout and links */
 /* Footer section start */
 .footer-container {
     justify-content: center;

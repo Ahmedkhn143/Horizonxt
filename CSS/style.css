@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
+/* Core theme variables for homepage */
 :root {
     --font-serif: 'Playfair Display', serif;
     --accent-primary: #ec135d;
@@ -372,11 +373,6 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.explore-btn {
-    text-align: center;
-    margin-top: 40px;
-}
-
 .text-center {
     text-align: center;
 
@@ -452,30 +448,6 @@ li {
 .content-container {
     max-width: 952px;
     margin: 0 auto;
-}
-
-.justify-between {
-    display: flex;
-    padding: 30px 0;
-    align-self: stretch;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.justify-between .btn {
-    color: #6b6b6b;
-    border: 1px solid #2f3237;
-    border-radius:12px;
-    background-color: #19131c;
-    
-}
-.justify-between .btn:hover {
-    color: #ec135d;
-    border-color: #ec135d;
-    background-color: transparent;
-    box-shadow: 0 0 10px rgba(236, 19, 93, 0.5);
 }
 
 /* How we do it section  */
@@ -798,7 +770,7 @@ li {
     background: rgba(236, 19, 93, 0.05);
 }
 
-/* Radio button logic for active tabs  */
+/* Plain CSS tabs: checked radio decides which tab looks active */
 #tab-retail:checked ~ .industry-tabs label[for="tab-retail"],
 #tab-healthcare:checked ~ .industry-tabs label[for="tab-healthcare"],
 #tab-education:checked ~ .industry-tabs label[for="tab-education"],
@@ -819,7 +791,7 @@ li {
     animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Radio button logic for active panes */
+/* Same radio state shows the matching content pane */
 #tab-retail:checked ~ .industry-content #retail,
 #tab-healthcare:checked ~ .industry-content #healthcare,
 #tab-education:checked ~ .industry-content #education,
@@ -883,30 +855,6 @@ li {
 .contant-btn h2 span.dot {
     color: #ec135d;
     text-shadow: 0 0 15px rgba(236, 19, 93, 0.6);
-}
-
-.btn-filled {
-    background-color: #ec135d;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-filled:hover {
-    background-color: #d11051;
-    transform: translateY(-2px);
-}
-
-.footer-divider {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 40px 0;
-    width: 100%;
 }
 
 .footer-links {
